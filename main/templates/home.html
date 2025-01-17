@@ -11,50 +11,50 @@
             padding: 0;
         }
         header {
-            background-color: #007BFF;
-            color: white;
+            background-color: white;
+            color: black;
             padding: 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            gap: 50px; /* Jarak antara logo dan navbar */
+        }
+        header .logo img {
+            height: 50px; /* Atur ukuran gambar logo */
+            width: auto;
+        }
+        header nav {
+            display: flex;
+            gap: 15px; /* Jarak antar tautan */
         }
         header nav a {
-            color: white;
+            color: black;
             text-decoration: none;
-            margin: 0 15px;
+            font-size: 1em;
         }
         header nav a:hover {
             text-decoration: underline;
         }
         .hero {
-            background: url('hero-image.jpg') no-repeat center center/cover;
-            height: 80vh;
-            color: white;
+            background: url('home1.png') no-repeat center center/cover;
+            height: 60vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 20px;
         }
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
+        .content {
+            padding: 20px;
+            text-align: center;
         }
-        .hero p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
+        .content h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
         }
-        .hero button {
-            background-color: #FF6F61;
-            color: white;
-            border: none;
-            padding: 10px 20px;
+        .content p {
             font-size: 1em;
-            cursor: pointer;
-        }
-        .hero button:hover {
-            background-color: #e55d50;
+            margin: 10px 0;
         }
         footer {
             background-color: #343A40;
@@ -77,21 +77,23 @@
 <body>
     <header>
         <div class="logo">
-            <h1>OK OCE Youth</h1>
+            <img src="logo1.png" alt="OK OCE Youth Logo">
         </div>
         <nav>
             <a href="#">Home</a>
-            <a href="#about">Tentang Kami</a>
-            <a href="#programs">Program</a>
-            <a href="#gallery">Galeri</a>
-            <a href="#contact">Hubungi Kami</a>
+            <a href="#about">About Us</a>
+            <a href="#program">Program</a>
+            <a href="#event">Event</a>
+            <a href="#partner">Partner</a>
+            <a href="#contact">Contact Info</a>
         </nav>
     </header>
 
-    <div class="hero">
-        <h1>Mendorong Generasi Muda Menuju Indonesia Emas 2045</h1>
-        <p>Bergabunglah bersama kami untuk menciptakan lapangan pekerjaan dan inovasi baru.</p>
-        <button onclick="location.href='#about'">Pelajari Lebih Lanjut</button>
+    <div class="hero"></div>
+
+    <div class="content">
+        <h2>What is Oke Oce Youth</h2>
+        <h2>VISI MISI</h2>
     </div>
 
     <footer>
