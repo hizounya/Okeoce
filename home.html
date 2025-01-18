@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oke Oce Youth - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #4A00E0, #FF0080);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #FFD700;
+        }
+
+        header nav a.active {
+            border-bottom: 2px solid #FFD700;
+        }
+
+        .hero {
+            background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .cta {
+            background-color: #FFD700;
+            color: #4A00E0;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s, color 0.3s;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero .cta:hover {
+            background-color: #4A00E0;
+            color: white;
+        }
+
+        footer {
+            background: #4A00E0;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Oke Oce Youth</div>
+        <nav>
+            <a href="home.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="programs.html">Programs</a>
+            <a href="event.html">Event</a>
+            <a href="partner.html">Partner</a>
+            <a href="contact.html">Contact Info</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Oke Oce Youth</h1>
+        <p>Empowering Indonesian Youth to Lead, Innovate, and Inspire Positive Change</p>
+        <a href="about.html" class="cta">Learn More</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Oke Oce Youth. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+    </footer>
+</body>
+</html>

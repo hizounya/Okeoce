@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oke Oce Youth - Partners</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #4A00E0, #FF0080);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #FFD700;
+        }
+
+        header nav a.active {
+            border-bottom: 2px solid #FFD700;
+        }
+
+        .section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #4A00E0;
+        }
+
+        .partners-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .partner-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .partner-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .partner-card h3 {
+            margin: 15px 0;
+            font-size: 1.5em;
+            color: #4A00E0;
+        }
+
+        .partner-card p {
+            padding: 0 15px;
+            font-size: 1em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .partner-card .learn-more {
+            display: block;
+            text-align: center;
+            margin: 15px;
+            padding: 10px 20px;
+            background-color: #FF0080;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .partner-card .learn-more:hover {
+            background-color: #4A00E0;
+        }
+
+        footer {
+            background: #4A00E0;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Oke Oce Youth</div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="programs.html">Programs</a>
+            <a href="event.html">Event</a>
+            <a href="partner.html" class="active">Partner</a>
+            <a href="contact.html">Contact Info</a>
+        </nav>
+    </header>
+
+    <section class="section partner">
+        <h2>Our Partners</h2>
+        <div class="partners-container">
+            <div class="partner-card">
+                <img src="https://via.placeholder.com/300x180" alt="Partner 1">
+                <h3>Partner 1</h3>
+                <p>Committed to supporting our mission with resources and expertise.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+            <div class="partner-card">
+                <img src="https://via.placeholder.com/300x180" alt="Partner 2">
+                <h3>Partner 2</h3>
+                <p>A vital collaborator in advancing youth empowerment programs.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+            <div class="partner-card">
+                <img src="https://via.placeholder.com/300x180" alt="Partner 3">
+                <h3>Partner 3</h3>
+                <p>Providing essential funding and guidance for community projects.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Oke Oce Youth. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+    </footer>
+</body>
+</html>

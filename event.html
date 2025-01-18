@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oke Oce Youth - Event</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #4A00E0, #FF0080);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #FFD700;
+        }
+
+        header nav a.active {
+            border-bottom: 2px solid #FFD700;
+        }
+
+        .section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #4A00E0;
+        }
+
+        .event-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 350px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 15px 0 10px;
+            font-size: 1.8em;
+            color: #4A00E0;
+        }
+
+        .card p {
+            padding: 0 15px;
+            font-size: 1em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .card .details {
+            padding: 10px 15px;
+            font-size: 0.9em;
+            color: #777;
+            text-align: left;
+        }
+
+        .card .learn-more {
+            display: block;
+            text-align: center;
+            margin: 15px;
+            padding: 10px 20px;
+            background-color: #FF0080;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .card .learn-more:hover {
+            background-color: #4A00E0;
+        }
+
+        footer {
+            background: #4A00E0;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Oke Oce Youth</div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="programs.html">Programs</a>
+            <a href="event.html" class="active">Event</a>
+            <a href="partner.html">Partner</a>
+            <a href="contact.html">Contact Info</a>
+        </nav>
+    </header>
+
+    <section class="section event">
+        <h2>Our Events</h2>
+        <div class="event-container">
+            <div class="card">
+                <img src="https://via.placeholder.com/350x200" alt="Youth Empowerment Seminar">
+                <h3>Youth Empowerment Seminar</h3>
+                <div class="details">
+                    <p><strong>Date:</strong> 12th August 2025</p>
+                    <p><strong>Location:</strong> Jakarta Convention Center</p>
+                </div>
+                <p>Motivational sessions and training to empower youth for leadership and innovation.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/350x200" alt="Business Competition">
+                <h3>Business Competition</h3>
+                <div class="details">
+                    <p><strong>Date:</strong> 25th September 2025</p>
+                    <p><strong>Location:</strong> UI Depok Campus</p>
+                </div>
+                <p>A platform for youth to pitch and develop innovative business ideas with experts.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Oke Oce Youth. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+    </footer>
+</body>
+</html>
