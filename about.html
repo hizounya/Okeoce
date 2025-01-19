@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oke Oce Youth - About Us</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -14,144 +13,373 @@
             color: #333;
         }
 
+        /* Header Styling */
         header {
-            background: linear-gradient(90deg, #4A00E0, #FF0080);
-            color: white;
-            padding: 15px 20px;
+            background-color: white;
+            padding: 20px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        header .logo {
-            font-size: 1.8em;
-            font-weight: bold;
+        .logo img {
+            max-width: 100px;
+            height: auto;
         }
 
-        header nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        header nav a:hover {
-            color: #FFD700;
-        }
-
-        header nav a.active {
-            border-bottom: 2px solid #FFD700;
-        }
-
-        .section {
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #4A00E0;
-        }
-
-        .about-container {
+        nav {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
-        .about-text {
-            flex: 1 1 500px;
+        nav a {
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+            color: #444;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: #D70000;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            border-radius: 5px;
+            width: 200px;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .nav-button {
+            background-color: #D70000;
+            color: white;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Organization Info */
+        .organization-info {
+            padding: 80px 10%;
+            background: linear-gradient(135deg, #ff4d4d, #6b42a0);
+            color: white;
+            border-radius: 20px;
             text-align: left;
         }
 
-        .about-text h3 {
-            color: #FF0080;
-            font-size: 1.8em;
+        .organization-info h1 {
+            font-size: 2.8em;
+            font-weight: bold;
+        }
+
+        .info-details p {
+            font-size: 1.2em;
             margin-bottom: 15px;
         }
 
-        .about-text p {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        .about-image {
-            flex: 1 1 400px;
-        }
-
-        .about-image img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        footer {
-            background: #4A00E0;
-            color: white;
+        /* Organization Goals */
+        .organization-goals {
             text-align: center;
-            padding: 20px 0;
+            padding: 80px 10%;
+            background: #fff;
+            border-radius: 20px;
         }
 
-        footer p {
-            margin: 5px 0;
+        .organization-goals h1 {
+            font-size: 2.8em;
+            font-weight: bold;
+            color: #4A00E0;
+            margin-bottom: 20px;
         }
 
-        footer a {
-            color: #FFD700;
-            text-decoration: none;
+        .organization-goals p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 40px;
+            line-height: 1.8;
         }
 
-        footer a:hover {
-            text-decoration: underline;
+        .goal-items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .goal-item {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .goal-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .goal-item img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+
+        .goal-item h3 {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #4A00E0;
+        }
+
+        /* Organization Values */
+        .organization-values {
+            text-align: center;
+            padding: 80px 10%;
+            background: #fff;
+        }
+
+        .organization-values h1 {
+            font-size: 2.8em;
+            font-weight: bold;
+            color: #4A00E0;
+            margin-bottom: 40px;
+        }
+
+        .value-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .value-box {
+            flex: 1;
+            min-width: 250px;
+            height: 200px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .value-box:hover {
+            transform: scale(1.05);
+        }
+
+        .energetic {
+            background: url('energetic.jpg') no-repeat center/cover;
+        }
+
+        .inspirational {
+            background: url('inspirational.jpg') no-repeat center/cover;
+        }
+
+        .friendly {
+            background: url('friendly.jpg') no-repeat center/cover;
+        }
+
+        .supportive {
+            background: url('supportive.jpg') no-repeat center/cover;
+        }
+
+        .innovative {
+            background: url('innovative.jpg') no-repeat center/cover;
+        }
+
+        .custom-footer {
+            background-color: #111;
+            color: white;
+            padding: 50px 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo img {
+            max-width: 150px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .footer-about, .footer-contact {
+            max-width: 400px;
+        }
+
+        .footer-about h3, .footer-contact h3 {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .footer-about hr, .footer-contact hr {
+            width: 50px;
+            border: 2px solid white;
+            margin-bottom: 20px;
+        }
+
+        .footer-about p, .footer-contact p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        .footer-contact p strong {
+            color: #fff;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">Oke Oce Youth</div>
+        <div class="logo">
+            <a href="home.html">
+                <img src="https://i.imgur.com/lxSBkUa.png" alt="Oke Oce Youth Logo">
+            </a>
+        </div>        
         <nav>
-            <a href="home.html">Home</a>
-            <a href="about.html" class="active">About Us</a>
-            <a href="programs.html">Programs</a>
-            <a href="event.html">Event</a>
-            <a href="partner.html">Partner</a>
-            <a href="contact.html">Contact Info</a>
+            <a href="home.html">BERANDA</a>
+            <div class="dropdown">
+                <a href="about.html" class="dropdown-toggle active">TENTANG KAMI <span>&#9662;</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Information</a></li>
+                    <li><a href="#">Purpose</a></li>
+                    <li><a href="#">Value</a></li>
+                </ul>
+            </div>
+            <a href="programs.html">BERITA</a>
+            <a href="event.html">EVENT</a>
+            <a href="partner.html">7 TOP</a>
+            <a href="contact.html">PENGGERAK</a>
+            <a href="#">PROGRAM</a>
+            <a href="#">DONASI</a>
+            <a href="#">MERCHANDISE</a>
         </nav>
+        <a href="#" class="nav-button">MASUK</a>
     </header>
 
-    <section class="section">
-        <h2>About Us</h2>
-        <div class="about-container">
-            <div class="about-text">
-                <h3>Who We Are</h3>
-                <p>
-                    Oke Oce Youth is a social movement committed to empowering Indonesian youth through leadership training, entrepreneurship workshops, and community outreach. 
-                    We aim to inspire and enable young individuals to create meaningful societal change.
-                </p>
-                <p>
-                    Our mission is to cultivate future leaders and innovators by providing essential skills, resources, and opportunities. Through collaboration, we believe in the power of collective action to create a brighter future for Indonesia.
-                </p>
+    <section class="organization-info">
+        <h1>Informasi Organisasi</h1>
+        <div class="info-details">
+            <p><strong>Alamat:</strong> Jalan Tebet Barat Dalam VII No.3</p>
+            <p><strong>Negara:</strong> Indonesia</p>
+            <p><strong>Status:</strong> Organisasi Non-Pemerintah</p>
+        </div>
+    </section>
+
+    <section class="organization-goals">
+        <h1>Tujuan Organisasi</h1>
+        <p>Tujuan utama kami adalah untuk meningkatkan profesionalisme generasi muda dengan skala intervensi berbasis bukti di sektor profesional dan sosial.</p>
+        <div class="goal-items">
+            <div class="goal-item">
+                <img src="icon1.png" alt="Kaum Muda">
+                <h3>Memberdayakan Kaum Muda</h3>
+                <p>Membekali generasi muda dengan pengetahuan dan keterampilan untuk menjadi wirausahawan sukses.</p>
             </div>
-            <div class="about-image">
-                <img src="https://via.placeholder.com/400" alt="Oke Oce Youth Team">
+            <div class="goal-item">
+                <img src="icon2.png" alt="Lapangan Kerja">
+                <h3>Menciptakan Lapangan Kerja</h3>
+                <p>Merangsang pertumbuhan ekonomi dengan menciptakan bisnis baru.</p>
+            </div>
+            <div class="goal-item">
+                <img src="icon3.png" alt="Inovasi">
+                <h3>Mendorong Inovasi</h3>
+                <p>Meningkatkan kreativitas dan inovasi pada wirausahawan muda.</p>
+            </div>
+            <div class="goal-item">
+                <img src="icon4.png" alt="Ekosistem Kuat">
+                <h3>Membangun Ekosistem Kewirausahaan yang Kuat</h3>
+                <p>Mengembangkan jaringan wirausahawan, mentor, dan investor yang saling mendukung.</p>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Oke Oce Youth. All rights reserved.</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
-    </footer>
+    <section class="organization-values">
+        <h1>Nilai-Nilai Organisasi</h1>
+        <div class="value-row">
+            <div class="value-box energetic">Energetic</div>
+            <div class="value-box inspirational">Inspirational</div>
+            <div class="value-box friendly">Friendly</div>
+            <div class="value-box supportive">Supportive</div>
+            <div class="value-box innovative">Innovative</div>
+        </div>
+    </section>
+
+    <footer class="custom-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo-ok-oce.png" alt="OK OCE Logo">
+                <img src="logo-gerakan-sosial.png" alt="Gerakan Sosial">
+                <img src="logo-wtp.png" alt="WTP Award">
+            </div>
+    
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <hr>
+                <p>
+                    OK OCE Indonesia adalah gerakan sosial penciptaan lapangan kerja, OK OCE Indonesia,
+                    terus memberikan kontribusi positif untuk bangsa. Melalui gerakan kewirausahaan dan ekonomi kerakyatan ini,
+                    OK OCE Indonesia bertujuan untuk bisa menciptakan kemandirian dan lapangan kerja yang banyak untuk rakyat Indonesia.
+                </p>
+            </div>
+    
+            <div class="footer-contact">
+                <h3>Contact Info</h3>
+                <hr>
+                <p><strong>OK OCE INDONESIA :</strong></p>
+                <p>
+                    Jl. Tebet Barat Dalam No VII No.3, RT.9/RW.6, Tebet Barat,<br>
+                    Kec. Tebet, Jakarta Selatan, Daerah Khusus Ibukota Jakarta. 12810
+                </p>
+                <p><strong>Tel: +62 822 1010 9142</strong></p>
+                <p>Email: okeoceyouth@gmail.com</p>
+                <p>Website: okoceyouth.adaiiop.web.id</p>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>    
 </body>
 </html>
